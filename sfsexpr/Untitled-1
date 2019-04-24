@@ -1,0 +1,17 @@
+project (libsfsexpr)
+
+# Add a library with the above sources
+add_library(${PROJECT_NAME} cstring.c
+event_temp.c
+faststack.c
+io.c
+parser.c
+sexp.c
+sexp_memory.c
+sexp_ops.c
+sexp_vis.c)
+
+
+target_include_directories( ${PROJECT_NAME}
+    PUBLIC ${PROJECT_SOURCE_DIR}
+)
